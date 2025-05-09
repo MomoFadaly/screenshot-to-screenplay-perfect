@@ -10,12 +10,14 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-captionBlue to-captionBlue-light">
       <Navbar />
-      <main>
-        <Hero />
-        <TranscribeForm />
-        <StatsSection />
-        <FeaturesSection />
-      </main>
+      <div className="max-w-6xl mx-auto px-4">
+        <main>
+          <Hero />
+          <TranscribeForm />
+          <StatsSection />
+          <FeaturesSection />
+        </main>
+      </div>
     </div>
   );
 };
