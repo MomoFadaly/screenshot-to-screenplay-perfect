@@ -8,7 +8,7 @@ import FeaturesSection from "@/components/features-section";
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-captionBlue via-captionBlue-light to-captionBlue-light">
+    <div className="min-h-screen bg-gradient-to-r from-[#0842BF] via-[#1054D9] to-[#126EF5]">
       <Navbar />
       <div className="max-w-6xl mx-auto px-4">
         <main>
