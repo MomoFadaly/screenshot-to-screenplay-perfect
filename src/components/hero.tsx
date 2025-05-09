@@ -2,8 +2,31 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const Hero: React.FC = () => {
-  return <section className="pt-8 pb-16 md:pb-24 flex flex-col md:flex-row items-center relative">
+  // Get reference to the mobile menu state from navbar
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
+  // Listen to mobile menu state changes
+  React.useEffect(() => {
+    const handleMenuChange = (e: CustomEvent) => {
+      setMenuOpen(e.detail.open);
+    };
+    
+    window.addEventListener('mobile-menu-toggle', handleMenuChange as EventListener);
+    return () => {
+      window.removeEventListener('mobile-menu-toggle', handleMenuChange as EventListener);
+    };
+  }, []);
+
+  // If mobile menu is open, don't render the hero content
+  if (menuOpen) {
+    return null;
+  }
+
+  return (
+    <section className="pt-8 pb-16 md:pb-24 flex flex-col md:flex-row items-center relative">
       <div className="w-full md:w-3/5">
         <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6">
           Transcribe Any Video, Instantly
@@ -20,6 +43,8 @@ const Hero: React.FC = () => {
           className="w-64 sm:w-80 md:w-96 object-contain relative z-10 -mb-8 md:-mb-16" 
         />
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

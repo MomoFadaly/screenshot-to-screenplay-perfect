@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./logo";
 import { Button } from "@/components/ui/button";
 import { Menu, X, UserPlus } from "lucide-react";
@@ -10,7 +10,14 @@ const Navbar: React.FC = () => {
   const isMobile = useIsMobile();
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    const newState = !menuOpen;
+    setMenuOpen(newState);
+    
+    // Dispatch an event to notify other components about menu state
+    const event = new CustomEvent('mobile-menu-toggle', { 
+      detail: { open: newState } 
+    });
+    window.dispatchEvent(event);
   };
 
   return (
