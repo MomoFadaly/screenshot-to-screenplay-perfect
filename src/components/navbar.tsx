@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <header className="py-4 px-6 md:px-16 flex justify-between items-center">
+    <header className="py-4 flex justify-between items-center">
       <Logo />
       
       <nav className="hidden md:flex gap-10">

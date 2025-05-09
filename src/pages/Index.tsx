@@ -10,14 +10,16 @@ const Index: React.FC = () => {
   return (
     <div>
       <div className="bg-gradient-to-l from-[#1032A8] to-[#1A58D3]">
-        <Navbar />
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Navbar />
           <Hero />
           <TranscribeForm />
           <StatsSection />
         </div>
       </div>
-      <FeaturesSection />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FeaturesSection />
+      </div>
     </div>
   );
 };

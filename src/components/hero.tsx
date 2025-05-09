@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-8 pb-24 px-4 md:px-6 flex flex-col md:flex-row items-center">
+    <section className="pt-8 pb-24 flex flex-col md:flex-row items-center">
       <div className="w-full md:w-3/5">
         <h1 className="text-white text-5xl md:text-6xl font-bold mb-6">
           Transcribe Any Video, Instantly

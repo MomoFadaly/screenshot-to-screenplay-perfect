@@ -4,7 +4,7 @@ import StatCard from "./stat-card";
 
 const StatsSection: React.FC = () => {
   return (
-    <section className="px-6 md:px-16 max-w-4xl mx-auto mb-24">
+    <section className="mb-24">
       <div className="flex flex-col md:flex-row gap-4">
         <StatCard 
           number="12,510" 
