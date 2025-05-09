@@ -11,9 +11,9 @@ const TranscribeForm: React.FC = () => {
         <Input 
           type="text" 
           placeholder="Paste your video link here" 
-          className="flex-grow py-6 px-6 text-lg bg-white border-0"
+          className="flex-grow py-6 px-6 text-lg bg-white border-0 rounded-md h-[60px] shadow-sm"
         />
-        <Button className="bg-captionBlue hover:bg-captionBlue-dark text-white font-semibold text-lg py-6 md:py-6 px-8 rounded-md h-auto flex items-center gap-2 whitespace-nowrap">
+        <Button className="bg-captionBlue hover:bg-captionBlue-dark text-white font-semibold text-lg py-2 px-8 rounded-md h-[60px] flex items-center gap-2 whitespace-nowrap shadow-md">
           <span>Transcribe Now</span>
           <ArrowRight size={20} />
         </Button>
