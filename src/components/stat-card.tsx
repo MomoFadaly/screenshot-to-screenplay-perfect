@@ -1,3 +1,4 @@
+
 import React from "react";
 interface StatCardProps {
   number: string;
@@ -7,11 +8,11 @@ const StatCard: React.FC<StatCardProps> = ({
   number,
   description
 }) => {
-  return <div className="bg-white rounded-xl p-6 text-center flex-1 my-[36px] mx-[16px]">
-      <div className="text-captionBlue text-4xl md:text-5xl font-bold mb-2">
+  return <div className="bg-white rounded-xl p-4 md:p-6 text-center flex-1">
+      <div className="text-captionBlue text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
         {number}
       </div>
-      <div className="text-gray-800 text-sm md:text-base">
+      <div className="text-gray-800 text-xs md:text-sm lg:text-base">
         {description}
       </div>
     </div>;

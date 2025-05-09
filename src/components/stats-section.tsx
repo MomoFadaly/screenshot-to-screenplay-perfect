@@ -4,8 +4,8 @@ import StatCard from "./stat-card";
 
 const StatsSection: React.FC = () => {
   return (
-    <section className="mb-24">
-      <div className="flex flex-col md:flex-row gap-4">
+    <section className="mb-12 md:mb-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <StatCard 
           number="12,510" 
           description={
@@ -19,7 +19,7 @@ const StatsSection: React.FC = () => {
           number="99 %" 
           description={
             <>
-              AI-powered pis-<br/>
+              AI-powered pre-<br/>
               cision for transcripts
             </>
           }
